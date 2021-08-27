@@ -17,14 +17,10 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  addTodoItem,
-  loadTodos,
-  removeTodoItem,
-  saveTodos,
-  toggleTodoItem,
-} from '../src/actions/todoActions';
-import { switchFilter } from '../src/actions/filterActions';
+
+import { addTodoItem, removeTodoItem, toggleTodoItem } from '../src/slices/todoSlice';
+import { switchFilter } from '../src/slices/filterSlice';
+import { saveTodos, loadTodos } from '../src/slices/todoSlice';
 
 const Home = () => {
   const [todoInput, setTodoInput] = useState('');
